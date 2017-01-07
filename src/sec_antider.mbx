@@ -52,9 +52,12 @@
     </p>
 
     <p>Let's analyze this indefinite integral notation.<index><main>integration</main><sub>notation</sub></index></p>
-
+    <todo>I'm not sure about this figure. It seems like there is a text way to do it, but I'm not sure if that will be accessible and/or work with MathJax. Alex?</todo>
     <p><!-- START figures/fig_anti1.tex -->
-      <image xml:id="img_anti1" >
+      <figure xml:id="fig_anti1">
+        <caption>Understanding the indefinite integral notation.</caption>
+        
+      <image xml:id="img_anti1" width="47%" >
         <description></description>
         <latex-image-code>
           <![CDATA[
@@ -83,9 +86,10 @@
           ]]>
         </latex-image-code>
       </image>
+      </figure>
       <!-- figures/fig_anti1.tex END -->
 
-      \captionof{figure}{Understanding the indefinite integral notation.} <xref ref="fig_anti1">Figure</xref> shows the typical notation of the indefinite integral. The integration symbol, <m>\int</m>, is in reality an <q>elongated S,</q> representing <q>take the sum.</q> We will later see how <em>sums</em> and <em>antiderivatives</em> are related.</p>
+      <xref ref="fig_anti1">Figure</xref> shows the typical notation of the indefinite integral. The integration symbol, <m>\int</m>, is in reality an <q>elongated S,</q> representing <q>take the sum.</q> We will later see how <em>sums</em> and <em>antiderivatives</em> are related.</p>
 
     <p>The function we want to find an antiderivative of is called the <em>integrand</em>. It contains the differential of the variable we are integrating with respect to. The <m>\int</m> symbol and the differential <m>dx</m> are not <q>bookends</q> with a function sandwiched in between; rather, the symbol <m>\int</m> means <q>find all antiderivatives of what follows,</q> and the function <m>f(x)</m> and <m>dx</m> are multiplied together; the <m>dx</m> does not <q>just sit there.</q></p>
 
@@ -168,11 +172,11 @@
     <p>Differentiation <q>undoes</q> the work done by antidifferentiation.</p>
 
     <p><xref ref="thm_deriv_glossary">Theorem</xref> gave a list of the derivatives of common functions we had learned at that point. We restate part of that list here to stress the relationship between derivatives and antiderivatives. This list will also be useful as a glossary of common antiderivatives as we learn.</p>
-
+    <!--
     <p>\newlength{\bh}
       \newlength{\bd}
       \settoheight{\bh}{<m>\frac{d}{dx}</m>}
-      \settodepth{\bd}{<m>\frac{d}{dx}</m>}</p>
+      \settodepth{\bd}{<m>\frac{d}{dx}</m>}</p>-->
 
     <theorem xml:id="thm_indef_alg">
       <title>Derivatives and Antiderivatives</title>
@@ -181,49 +185,49 @@
           Common Differentiation Rules
 
           <ol>
-            <li><p><m>\frac{d}{dx}\big(cf(x) \big) = c\cdot \fp(x)</m></p></li>
+            <li><p><m>\lzoo{x}{cf(x) } = c\cdot \fp(x)</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(f(x)\pm g(x) \big) =</m>
+            <li><p><m>\lzoo{x}{f(x)\pm g(x) } =</m>
                 <m>\fp(x)\pm g'(x)</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(C \big) = 0</m></p></li>
+            <li><p><m>\lzoo{x}{C } = 0</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(x \big) = 1</m></p></li>
+            <li><p><m>\lzoo{x}{x } = 1</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(x^n \big) = n\cdot x^{n-1}</m></p></li>
+            <li><p><m>\lzoo{x}{x^n } = n\cdot x^{n-1}</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(\sin(x) \big) = \cos(x)</m></p></li>
+            <li><p><m>\lzoo{x}{\sin(x) } = \cos(x)</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(\cos(x) \big) = -\sin(x)</m></p></li>
+            <li><p><m>\lzoo{x}{\cos(x) } = -\sin(x)</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(\tan(x) \big) = \sec^2(x)</m></p></li>
+            <li><p><m>\lzoo{x}{\tan(x) } = \sec^2(x)</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(\csc(x) \big) = -\csc(x) \cot(x)</m></p></li>
+            <li><p><m>\lzoo{x}{\csc(x) } = -\csc(x) \cot(x)</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(\sec(x) \big) = \sec(x) \tan(x)</m></p></li>
+            <li><p><m>\lzoo{x}{\sec(x) } = \sec(x) \tan(x)</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(\cot(x) \big) = -\csc^2(x)</m></p></li>
+            <li><p><m>\lzoo{x}{\cot(x) } = -\csc^2(x)</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(e^ x \big) = e^x</m></p></li>
+            <li><p><m>\lzoo{x}{e^ x } = e^x</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(a^x \big) = \ln(a) \cdot a^x</m></p></li>
+            <li><p><m>\lzoo{x}{a^x } = \ln(a) \cdot a^x</m></p></li>
 
-            <li><p><m>\frac{d}{dx}\big(\ln(x) \big) = \frac1 x</m></p></li>
+            <li xml:id="eq_int1overx"><p><m>\lzoo{x}{\ln(x) } = \frac1 x \text{ for } x \gt 0</m></p></li>
           </ol>
 
           Common Indefinite Integral Rules
 
           <ol>
-            <li><p><m>\int c\cdot f(x)\ dx = c\cdot \int f(x)\ dx</m></p></li>
+            <li xml:id="eq_intcmr"><p><m>\int c\cdot f(x)\ dx = c\cdot \int f(x)\ dx</m></p></li>
 
-            <li><p><m>\int \big(f(x)\pm g(x)\big)\ dx =</m>
+            <li xml:id="eq_intsr"><p><m>\int \big(f(x)\pm g(x)\big)\ dx =</m>
                 <m>\int f(x)\ dx\pm \int g(x)\ dx</m></p></li>
 
             <li><p><m>\int 0\ dx = C</m></p></li>
 
             <li><p><m>\int 1\ dx = \int dx = x+C</m></p></li>
 
-            <li><p><m>\int x^n\ dx =\frac{1}{n+1}x^{n+1}+ C</m>  { (<m>n\neq -1</m>)}</p></li>
+            <li xml:id="eq_intpr"><p><m>\int x^n\ dx =\frac{1}{n+1}x^{n+1}+ C</m>  { (<m>n\neq -1</m>)}</p></li>
 
             <li><p><m>\int \cos(x) \ dx = \sin(x) +C</m></p></li>
 
@@ -241,7 +245,7 @@
 
             <li><p><m>\int a^x\ dx = \frac{1}{\ln(a) }\cdot a^x+C</m></p></li>
 
-            <li><p><m>\int \frac{1}x\ dx = \ln\abs{x}+C</m></p></li>
+            <li><p><m>\int \frac{1}x\ dx = \ln\left(\abs{x}\right)+C</m></p></li>
           </ol>
         </sidebyside>
       </statement>
@@ -250,13 +254,15 @@
     <p>We highlight a few important points from <xref ref="thm_indef_alg">Theorem</xref>:</p>
 
     <ul>
-      <li><p>Rule <hash />1 states <m>\int c\cdot f(x)\ dx = c\cdot \int f(x)\ dx</m>. This is the Constant Multiple Rule: <index><main>Constant Multiple Rule</main><sub>of integration</sub></index> we can temporarily ignore constants when finding antiderivatives, just as we did when computing derivatives (i.e., <m>\frac{d}{dx}\big(3x^2\big)</m> is just as easy to compute as <m>\frac{d}{dx}\big(x^2\big)</m>). An example:
-          <me>
-            \int 5\cos(x) \ dx = 5\cdot\int \cos(x) \ dx = 5\cdot (\sin(x) +C) = 5\sin(x) + C.
-          </me>
+      <li><p><xref ref="eq_intcmr">Rule</xref> states <m>\int c\cdot f(x)\ dx = c\cdot \int f(x)\ dx</m>. This is the Constant Multiple Rule: <index><main>Constant Multiple Rule</main><sub>of integration</sub></index> we can temporarily ignore constants when finding antiderivatives, just as we did when computing derivatives (i.e., <m>\lzoo{x}{3x^2}</m> is just as easy to compute as <m>\lzoo{x}{x^2}</m>). An example:
+          <md>
+            <mrow>\int 5\cos(x) \ dx \amp = 5\cdot\int \cos(x) \ dx</mrow>
+             <mrow>\amp = 5\cdot (\sin(x) +C)</mrow>
+             <mrow> \amp = 5\sin(x) + C</mrow>.
+          </md>
           In the last step we can consider the constant as also being multiplied by 5, but <q>5 times a constant</q> is still a constant, so we just write <q><m>C</m> </q>.</p></li>
 
-      <li><p>Rule <hash />2 is the Sum/Difference Rule:<index><main>integration</main><sub>Sum/Difference Rule</sub></index><index><main>Sum/Difference Rule</main><sub>of integration</sub></index> we can split integrals apart when the integrand contains terms that are added/subtracted, as we did in <xref ref="ex_anti3">Example</xref>. So:
+      <li><p><xref ref="eq_intsr">Rule</xref> is the Sum/Difference Rule:<index><main>integration</main><sub>Sum/Difference Rule</sub></index><index><main>Sum/Difference Rule</main><sub>of integration</sub></index> we can split integrals apart when the integrand contains terms that are added/subtracted, as we did in <xref ref="ex_anti3">Example</xref>. So:
           <md>
             <mrow>\int(3x^2+4x+5)\ dx \amp = \int 3x^2\ dx + \int 4x\ dx + \int 5\ dx</mrow>
             <mrow>\amp = 3\int x^2\ dx + 4\int x\ dx + \int 5 \ dx</mrow>
@@ -265,10 +271,10 @@
           </md>
           In practice we generally do not write out all these steps, but we demonstrate them here for completeness.</p></li>
 
-      <li><p>Rule <hash />5 is the Power Rule of indefinite integration.<index><main>integration</main><sub>Power Rule</sub></index><index><main>Power Rule</main><sub>integration</sub></index> There are two important things to keep in mind:</p>
+      <li><p><xref ref="eq_intpr">Rule</xref> is the Power Rule of indefinite integration.<index><main>integration</main><sub>Power Rule</sub></index><index><main>Power Rule</main><sub>integration</sub></index> There are two important things to keep in mind:</p>
 
       <ol>
-        <li><p>Notice the restriction that <m>n\neq -1</m>. This is important: <m>\int \frac{1}{x}\ dx \neq</m> <q><m>\frac{1}{0}x^0+C</m></q>; rather, see Rule <hash />14.</p></li>
+        <li><p>Notice the restriction that <m>n\neq -1</m>. This is important: <m>\int \frac{1}{x}\ dx \neq</m> <q><m>\frac{1}{0}x^0+C</m></q>; rather, see <xref ref="eq_int1overx">Rule</xref>.</p></li>
 
         <li><p>We are presenting antidifferentiation as the <q>inverse operation</q> of differentiation. Here is a useful quote to remember:
             <blockquote>
@@ -279,7 +285,7 @@
 
       </li>
 
-      <li><p>Note that Rule <hash />14 incorporates the absolute value of <m>x</m>. The exercises will work the reader through why this is the case; for now, know the absolute value is important and cannot be ignored.</p></li>
+      <li><p>Note that <xref ref="eq_int1overx">Rule</xref> incorporates the absolute value of <m>x</m>. The exercises will work the reader through why this is the case; for now, know the absolute value is important and cannot be ignored.</p></li>
     </ul>
   </introduction>
 
@@ -318,7 +324,7 @@
           </md>
         </p>
 
-        <p>Thus <m>v(t)= -32t+86</m>. We can use this equation to understand the motion of the object: when <m>t=0</m>, the object had a velocity of <m>v(0) = 86</m> ft/s. Since the velocity is positive, the object was moving upward.</p>
+        <p>Thus <m>v(t)= -32t+86</m>. We can use this equation to understand the motion of the object: when <m>t=0</m>, the object had a velocity of <m>v(0) = 86</m> ft/s. Since the initial velocity is positive, the object was moving upward.</p>
 
         <p>When did the object begin moving down? Immediately after <m>v(t) = 0</m>:
           <me>
@@ -337,9 +343,11 @@
       </statement>
       <solution>
         <p>We start by finding <m>\fp(t)</m>, which is an antiderivative of <m>\fpp(t)</m>:
-          <me>
-            \int \fpp(t)\ dt = \int \cos(t) \ dt = \sin(t) + C = \fp(t).
-          </me>
+          <md>
+            <mrow>\fp(t) \amp = \int \fpp(t)\ dt</mrow> 
+            <mrow> \amp =\int \cos(t) \ dt </mrow>
+            <mrow>\amp = \sin(t) + C </mrow>.
+          </md>
         </p>
 
         <p>So <m>\fp(t) = \sin(t) +C</m> for the correct value of <m>C</m>. We are given that <m>\fp(0) = 3</m>, so:
@@ -351,9 +359,11 @@
         <p>Using the initial value, we have found <m>\fp(t) = \sin(t) + 3</m>.
 		
           We now find <m>f(t)</m> by integrating again.
-          <me>
-            f(t)=\int \fp(t) \ dt = \int (\sin(t) +3)\ dt = -\cos(t) + 3t + C.
-          </me>
+          <md>
+            <mrow>f(t) \amp =\int \fp(t) \ dt</mrow>
+            <mrow> \amp  = \int (\sin(t) +3)\ dt </mrow>
+            <mrow> \amp = -\cos(t) + 3t + C</mrow>.
+          </md>
         </p>
 
         <p>We are given that <m>f(0) = 5</m>, so
@@ -370,7 +380,7 @@
 
     <p>This section introduced antiderivatives and the indefinite integral. We found they are needed when finding a function given information about its derivative(s). For instance, we found a position function given a velocity function.</p>
 
-    <p>In the next section, we will see how position and velocity are unexpectedly related by the areas of certain regions on a graph of the velocity function. Then, in <xref ref="sec_FTC">Section</xref>, we will see how areas and antiderivatives are closely tied together.</p>
+    <p>In <xref ref="sec_def_int">Section</xref>, we will see how position and velocity are unexpectedly related by the areas of certain regions on a graph of the velocity function. Then, in <xref ref="sec_FTC">Section</xref>, we will see how areas and antiderivatives are closely tied together.</p>
   </subsection>
 
   <exercises>
@@ -837,11 +847,11 @@
             <ol>
               <li><p>What is the domain of <m>y = \ln(x)</m>?</p></li>
 
-              <li><p>Find <m>\frac{d}{dx}\big(\ln(x) \big)</m>.</p></li>
+              <li><p>Find <m>\lzoo{x}{\ln(x) }</m>.</p></li>
 
               <li><p>What is the domain of <m>y = \ln(-x)</m>?</p></li>
 
-              <li><p>Find <m>\frac{d}{dx}\big(\ln(-x)\big)</m>.</p></li>
+              <li><p>Find <m>\lzoo{x}{\ln(-x)}</m>.</p></li>
 
               <li><p>You should find that <m>1/x</m> has two types of antiderivatives, depending on whether <m>x>0</m> or <m>x\lt 0</m>. In one expression, give a formula for <m>\ds \int \frac{1}{x}\ dx</m> that takes these different domains into account, and explain your answer.</p></li>
             </ol>
