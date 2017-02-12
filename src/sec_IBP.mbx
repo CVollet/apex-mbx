@@ -118,9 +118,9 @@
     </example>
 
     <p>You may wonder what would have happened in <xref ref="ex_ibp1"> Example</xref> if we had chosen our <m>u</m> and <m>dv</m> differently. If we had chosen <m>u=\cos(x)</m> and <m>dv=x \ dx</m> then <m>du=-\sin(x)\ dx</m> and <m>v=x^2/2</m>. Our second integral is not simpler than the first, we would have <m>\int x\cos(x)\,dx=\cos(x)\frac{x^2}{2}-\int \frac{x^2}{2}\left(-\sin(x)\right)\,dx</m>. The only way to approach this second integral would be yet another integration by parts.</p>
-    <p><xref ref="ex_ibp1"> Example</xref> demonstrates how Integration by Parts works in general. We try to identify <m>u</m> and <m>dv</m> in the integral we are given, and the key is that we usually want to choose <m>u</m> and <m>dv</m> so that <m>du</m> is simpler than <m>u</m> and <m>v</m> is hopefully not too much more complicated than <m>dv</m>. This will mean that the integral on the right side of the Integration by Parts formula, <m>\int v\,du</m> will be simpler to integrate than the original integral <m>\int u\,dv</m>.</p>
+    <p><xref ref="ex_ibp1"> Example </xref> demonstrates how Integration by Parts works in general. We try to identify <m>u</m> and <m>dv</m> in the integral we are given, and the key is that we usually want to choose <m>u</m> and <m>dv</m> so that <m>du</m> is simpler than <m>u</m> and <m>v</m> is hopefully not too much more complicated than <m>dv</m>. This will mean that the integral on the right side of the Integration by Parts formula, <m>\int v\,du</m> will be simpler to integrate than the original integral <m>\int u\,dv</m>.</p>
 
-    <p>In the example above, we chose <m>u=x</m> and <m>dv=\cos(x) \,dx</m>. Then <m>du=dx</m> was simpler than <m>u</m> and <m>v=\sin(x)</m> is no more complicated than <m>dv</m>. Therefore, instead of integrating <m>x\cos(x) \,dx</m>, we could integrate <m>\sin(x) \,dx</m>, which we knew how to do.</p>
+    <p>In <xref ref="ex_ibp1"> Example </xref> above, we chose <m>u=x</m> and <m>dv=\cos(x) \,dx</m>. Then <m>du=dx</m> was simpler than <m>u</m> and <m>v=\sin(x)</m> is no more complicated than <m>dv</m>. Therefore, instead of integrating <m>x\cos(x) \,dx</m>, we could integrate <m>\sin(x) \,dx</m>, which we knew how to do.</p>
 
     <p>A useful mnemonic for helping to determine <m>u</m> is <q>LIATE,</q> where</p>
 
